@@ -16,7 +16,7 @@ const Hero = () => {
                     </p>
                 </div>
                 <div className={styles.actions}>
-                    <Button link="/">
+                    <Button link="/auth">
                         <p>
                             ثبت نام در سامانه
                         </p>

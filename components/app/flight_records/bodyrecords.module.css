@@ -166,7 +166,6 @@
     color: #fff;
     pointer-events: none;
     width: .75rem;
-    /* width: clamp(0.6rem, 3vw, 1.2rem); */
 }
 
 .box_input {
@@ -176,8 +175,6 @@
 .item_box_input svg ,
 .box_input svg {
     width: clamp(0.6rem, 3vw, 1rem) !important;
-    /* margin: .2rem;
-    max-height: 2.5rem; */
 }
 
 .submit_body {

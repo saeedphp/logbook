@@ -4,21 +4,23 @@ import Link from "next/link";
 const Login = () => {
     return (
         <div className={styles.login}>
-            <Link href="/">
-                <button className={styles.btn}>
+            <Link href="/auth">
+                <a>
+                    <button className={styles.btn}>
                     <span className={styles['signup']}>
                         ثبت نام
                     </span>
-                    <span className={styles.signup}>
+                        <span className={styles.signup}>
                         /
                     </span>
-                    <span className={styles['signup']}>
+                        <span className={styles['signup']}>
                         ورود به سامانه
                     </span>
-                    <span className={styles['mobile-txt']}>
+                        <span className={styles['mobile-txt']}>
                         ورود به سامانه
                     </span>
-                </button>
+                    </button>
+                </a>
             </Link>
         </div>
     );

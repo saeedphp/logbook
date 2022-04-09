@@ -5,8 +5,17 @@ import Eye from "../icons/eye";
 import Lock from "../icons/lock";
 import Mail from "../icons/mail";
 import Button from "../ui/button";
+import { getRedirectStatus } from "next/dist/lib/load-custom-routes";
+import { Router, useRouter } from "next/router";
 
 const Login = () => {
+
+    const router = useRouter()
+    const [newTodo, setNewTodo] = useState({
+        username: '',
+        passwoard: ''
+    })
+    console.log(newTodo)
 
     const [showPassword, setShowPassword] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -31,6 +40,12 @@ const Login = () => {
         setIsLoggedIn(true);
     }
 
+    const LoginAdmin = (username, password) => {
+        if(newTodo.username == 'digilogbook' && newTodo.passwoard == '12345') {
+            router.push('/app')
+        }
+    }
+
     return (
         <Fragment>
 
@@ -41,6 +56,8 @@ const Login = () => {
                     type="text"
                     name="username"
                     placeholder="نام کاربری"
+                    value={newTodo.username}
+                    onChange={(e) => setNewTodo({...newTodo, username: e.target.value})}
                 />
             </div>
 
@@ -51,6 +68,8 @@ const Login = () => {
                     type={showPassword ? 'text' : 'password'}
                     name="password"
                     placeholder="رمز عبور"
+                    value={newTodo.passwoard}
+                    onChange={(e) => setNewTodo({...newTodo, passwoard: e.target.value})}
                 />
                 <span>
                     <Eye onClick={togglePassVisibility} />
@@ -59,7 +78,7 @@ const Login = () => {
 
             <a className={styles.forget} onClick={showForget}>رمز عبور خود را فراموش کرده اید؟</a>
 
-            <Button className={styles['login-btn']} onClick={formSubmitHandler}>
+            <Button className={styles['login-btn']} onClick={LoginAdmin}>
                 ورود
             </Button>
 
