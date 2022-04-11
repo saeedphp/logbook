@@ -14,7 +14,6 @@
     align-items: center;
     justify-content: center;
     height: auto;
-    max-height: 98vh;
     background: #26262647;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
@@ -47,7 +46,7 @@
 }
 
 .wrapper__nav .img-wrapper span {
-    position: relative !important;
+    position: absolute !important;
 }
 
 .wrapper__nav .info p {
@@ -105,6 +104,13 @@
     border-radius: 50%;
 }
 
+.iconhat svg path{
+    fill: #1a1a1bbe !important;
+}
+
+.iconhat svg {
+    width: 1.7rem;
+}
 .mobile-nav {
     display: none;
     z-index: 9;
@@ -147,7 +153,7 @@
         height: 47px;
         display: inline-block;
         border-radius: 100%;
-        margin: auto;
+        margin: 0 1rem;
         background: rgba(255, 255, 255, 0.08);
     }
 
@@ -164,4 +170,18 @@
         backdrop-filter: blur(10px);
         border-radius: 50%;
     }
+}
+
+.span_image {
+    background-color: #060707;
+    border-radius: 50%;
+    padding: .7rem 1rem;
+}
+.image_signup {
+    position: relative !important;
+    width: 6rem !important;
+    height: 6rem !important;
+    border-radius: 50% !important;
+    overflow: hidden;
+    color: #707070;
 }

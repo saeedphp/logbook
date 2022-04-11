@@ -6,10 +6,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url(../../../public/images/auth/cloud.png) no-repeat;
+    /* background: url(../../../public/images/auth/cloud.png) no-repeat; */
     background-size: cover;
     background-position: center center;
-    background-color: black;
+    /* background-color: black; */
+    margin-bottom: 10rem;
 }
 
 .auth p {

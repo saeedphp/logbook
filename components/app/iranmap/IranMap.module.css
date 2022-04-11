@@ -3,17 +3,17 @@
     justify-content: center;
     direction: rtl;
     text-align: right;
-    padding: 0 0 1rem 0;
+    /* padding: 0 0 1rem 0; */
     font-size: 11px;
-    margin: 0 auto;
-    overflow-x: auto;
-    padding-top: 5rem;
+    /* margin: 0 auto; */
+    /* overflow-x: auto; */
+    /* padding-top: 5rem; */
 }
 
 .show_title {
     display: block;
     position: absolute;
-    background-color: #333;
+    /* background-color: #333; */
     color: #fff;
     margin: 0;
     padding: 0 5px;
@@ -22,7 +22,7 @@
     line-height: 26px;
     border-radius: 2px;
     opacity: 0.8;
-    z-index: 999;
+    z-index: 89;
 }
 
 .map {
@@ -32,10 +32,11 @@
 
 .map .svg {
     position: relative;
-    height: 80vh;
-    width: auto;
+    height: clamp(20rem, 23vw, 70rem);
+    width: 100%;
     transition: transform 2.5s ease;
     overflow: auto;
+    z-index: 999 !important;
 }
 
 .map .border path {
@@ -48,7 +49,8 @@
 
 .map .sea path,
 .map .lake path {
-    fill: #6caed8;
+    fill: transparent;
+    stroke: transparent;
 }
 
 .map .province path:hover {
@@ -196,15 +198,15 @@
         text-align: center;
     }
 
-    .zoom_btn {
-        display: block;
-    }
+    /* .zoom_btn {
+      display: block;
+    } */
 
-    .map .svg {
-        padding-top: 1rem;
-        width: 90vw;
-        height: auto;
-    }
+    /* .map .svg {
+      padding-top: 1rem;
+      width: 90vw;
+      height: auto;
+    } */
 
     .map .map_zoom {
         transform: scale(1.3);

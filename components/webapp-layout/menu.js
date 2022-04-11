@@ -6,6 +6,7 @@ import AppHome from "../icons/app-home";
 import AppFlyReg from "../icons/app-flyReg";
 import AppFlyRec from "../icons/app-flyRec";
 import AppProfile from "../icons/app-profile";
+import Send from "../icons/send";
 import { Fragment } from "react";
 
 const Menu = () => {
@@ -53,7 +54,7 @@ const Menu = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/app/flightrecords">
+                                    <Link href="/app/savabegh_parvaz_new">
                                         <a>
                                             <span>
                                                 <AppFlyRec />
@@ -63,12 +64,22 @@ const Menu = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/">
+                                    <Link href="/app/profile">
                                         <a>
                                             <span>
                                                 <AppProfile />
                                             </span>
                                             پروفایل
+                                        </a>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/app/sabtball">
+                                        <a>
+                                            <span>
+                                                <Send />
+                                            </span>
+                                            ثبت بال
                                         </a>
                                     </Link>
                                 </li>
@@ -117,6 +128,16 @@ const Menu = () => {
                                         <AppProfile />
                                     </span>
                                     پروفایل
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/app/sabtball">
+                                <a>
+                                    <span>
+                                        <Send />
+                                    </span>
+                                    ثبت بال
                                 </a>
                             </Link>
                         </li>

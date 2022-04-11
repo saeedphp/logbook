@@ -9,5 +9,5 @@ const Anjoman = () => {
     )
 };
 
-Anjoman.layout = "L2";
+Anjoman.layout = "L4";
 export default Anjoman;

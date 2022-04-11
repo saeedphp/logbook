@@ -1,9 +1,7 @@
-
 .box {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
     width: 100%;
     background: rgba(255, 255, 255, 0.08);
     border-radius: .5rem;
@@ -12,84 +10,9 @@
     margin-bottom: 3rem;
 }
 
-.boxalldata {
+.box_right {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.boxdata {
-    width: 50%;
-}
-
-.boxdata table {
-    border-collapse: collapse;
-    width: 100%;
-    background-color: #232323;
-    border: .5rem;
-    border-radius: 1rem;
-}
-
-.boxdata table tr {
-    color: #fff;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: IRANSansDN;
-}
-
-.boxdata table tr:first-child {
-    background-color: #000;
-    border: 1px solid #80FF00;
-    border-radius: .5rem .5rem 0 0;
-}
-
-.boxdata table tr:nth-child(even){
-    background-color: #1a1a1a;
-}
-
-.boxdata table tr:last-child {
-    border-radius: 0 0 .5rem .5rem;
-}
-
-.boxdata table th {
-    padding: clamp(.2rem, 1vw, .7rem);
-    font-size: clamp(.4rem, 1vw, .8rem);
-    font-weight: 400;
-}
-
-.boxdata table td {
-    padding: clamp(.2rem, 1vw, .7rem);
-    font-size: clamp(.3rem, 1vw, .8rem);
-    font-weight: 400;
-    text-align: left;
-}
-.boxdata table td:first-child {
-    text-align: center;
-    padding-right: 1rem;
-}
-
-.boxmap {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem 0.5rem;
-    width: 50%;
-    max-height: 25rem;
-}
-
-.boxmap span {
-    width: 100% !important;
-    height: clamp(7rem, 27vw, 25rem) !important;
-}
-
-.boxmap img {
-    object-fit: contain;
-    max-width: 100% !important;
-    position: absolute!important;
+    padding: .5rem;
 }
 
 .header_box {
@@ -100,7 +23,25 @@
     margin-top: .5rem;
 }
 
-.title {
+.header_box div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.header_box svg {
+    width: clamp(0.9rem, 2vw, 1.2rem);
+    margin-left: .3rem;
+}
+
+.header_box span {
+    color: #fff;
+    font-size: clamp(.7rem, 1vw, .8rem);
+    font-weight: 400;
+}
+
+.title_left {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,16 +51,17 @@
     padding: clamp(.2rem, .5vw, .5rem) clamp(.4rem, 1vw, 1rem);
 }
 
-.title h5 {
+.title_left h5 {
     padding: 0;
     margin: 0;
     color: #fff;
-    font-size: clamp(.3rem, 1vw, .8rem);
+    font-size: clamp(.7rem, 1vw, .8rem);
     font-weight: 400;
 }
-.title svg {
-    width: clamp(.5rem, 2vw, 2rem);
+.title_left svg {
+    width: clamp(.8rem, 2vw, 2rem);
     margin-left: .4rem;
+    fill: #80FF00;
 }
 
 .buttonss {
@@ -127,41 +69,6 @@
     background: #80FF00;
     padding: 0 .5rem;
     border-radius: 5px;
-}
-
-.buttonss select {
-    color: #000;
-    background:transparent;
-    border: none;
-    outline: none;
-    width: 100%;
-    padding: .5rem 0;
-    cursor: pointer;
-    font-size: clamp(.4rem, 1vw, .9rem);
-}
-
-.buttonss select::-ms-expand {
-    display: none;
-}
-
-.buttons button {
-    color: #000;
-    font-size: clamp(.4rem, 1vw, .9rem);
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background: #c4c4c4;
-}
-
-.buttons button:first-child {
-    padding: .5rem 1.3rem;
-}
-
-
-.buttons button:last-child {
-    margin-right: 1rem;
-    padding: .5rem .9rem;
 }
 
 @media screen and (max-width: 500px) {
@@ -173,7 +80,13 @@
     }
 }
 
-.listdata {
+@media screen and (max-width: 800px) {
+    .box {
+        flex-direction: column;
+    }
+}
+
+.listdata_morabi {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -181,7 +94,7 @@
     flex-direction: column;
 }
 
-.data {
+.listdata_morabi .data {
     width: 100%;
     display: flex;
     align-items: center;
@@ -193,67 +106,65 @@
     margin-top: clamp(.4rem, 1vw, 1rem);
 }
 
-.time {
+.listdata_morabi .time {
     display: flex;
     align-items: center;
     color: #fff;
 }
 
-.time span {
+.listdata_morabi .time span {
     color: #fff;
-    font-size: clamp(.4rem, 1vw, .9rem);
+    font-size: clamp(.7rem, 1vw, .9rem);
     font-weight: 400;
     margin-left: clamp(.5rem, 1vw, 1rem);
 }
 
-.time div {
+.listdata_morabi .time div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.time svg {
-    width: clamp(.7rem, 1vw, 1.3rem);
-    margin-left: clamp(.2rem, 1vw, .7rem);
-}
-
-.qty {
+.listdata_morabi .qty {
     color: #80FF00;
-    font-size: clamp(.8rem, 2vw, 2rem);
+    font-size: clamp(1rem, 2vw, 1.8rem);
 }
 
-.header_chart {
+.nav {
+    padding: 0;
+    margin: 0;
     width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    height: auto;
 }
 
-.header_chart svg {
-    fill: #80FF00;
+.nav li {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.7rem;
+    margin-bottom: 2rem;
+    transition: 0.4s;
+    color: #707070;
+    font-size: clamp(.5rem, 4vw, 1.3rem);
 }
 
-.boxchart {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav li:nth-child(1) {
+    border: 1px solid #fff;
+    border-radius: 0 1.3rem 0 0;
 }
 
-.boxchart .row {
-    width: 100% !important;
+.nav li:nth-child(2) {
+    border: 1px solid #fff;
+    border-radius: 1.3rem 0 0 0;
 }
 
-.boxchart text {
-    font-family: IRANSansDN;
-    fill: #fff;
-    font-size: clamp(.4rem, 1vw, .9rem);
+.showsignup {
+    color: #101010 !important;
+    background: linear-gradient(277.19deg, #00FF00 2.34%, #80FF00 89.19%) !important;
 }
 
-.boxchart .recharts-surface {
-    width: 275px;
-}
-
-.boxchart .recharts-legend-wrapper {
-    display: none !important;
+.hidesignup {
+    color: #fff !important;
+    background-color: #232323 !important;
 }

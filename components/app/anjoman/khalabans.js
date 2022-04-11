@@ -1,17 +1,14 @@
 import morabi from './morabibody.module.css';
 import Button from "../../ui/button";
 import { getAllStudents } from '../../../data/students';
-import Gem from '../../icons/gem';
 import Arrow from '../../icons/arrow';
-import BodyRecords from '../flight_records/bodyrecords';
 import { useState } from 'react';
 import Hat2 from '../../icons/hat2';
 import Medal from '../../icons/medal';
-import Calendar from '../../icons/calendar';
 import AnjomanMorabiSavabegh from './anjoman_morabi_savabegh';
 
 
-const MorabiBody = () => {
+const Khalabans = () => {
 
     const Allstudents = getAllStudents();
 
@@ -96,4 +93,4 @@ const MorabiBody = () => {
     );
 }
 
-export default MorabiBody;
+export default Khalabans;

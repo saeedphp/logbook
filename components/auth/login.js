@@ -7,15 +7,33 @@ import Mail from "../icons/mail";
 import Button from "../ui/button";
 import { getRedirectStatus } from "next/dist/lib/load-custom-routes";
 import { Router, useRouter } from "next/router";
+import React, { useContext } from "react";
+import { ThemeContext, THEME_TYPE } from "./themprovider";
 
 const Login = () => {
+
+    const { themeMode, setThemeMode } = useContext(ThemeContext);
 
     const router = useRouter()
     const [newTodo, setNewTodo] = useState({
         username: '',
         passwoard: ''
     })
-    console.log(newTodo)
+
+    const LoginAdmin = () => {
+        setThemeMode(newTodo.username)
+        if(newTodo.username == THEME_TYPE.ADMIN) {
+            router.push('/app/')
+        }else if(newTodo.username == THEME_TYPE.MORABI){
+            router.push('/app')
+        }
+        else if(newTodo.username == THEME_TYPE.KHALABAN){
+            router.push('/app')
+        }
+        else if(newTodo.username == THEME_TYPE.ANJOMAN){
+            router.push('/app/anjoman')
+        }
+    }
 
     const [showPassword, setShowPassword] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -40,11 +58,6 @@ const Login = () => {
         setIsLoggedIn(true);
     }
 
-    const LoginAdmin = (username, password) => {
-        if(newTodo.username == 'digilogbook' && newTodo.passwoard == '12345') {
-            router.push('/app')
-        }
-    }
 
     return (
         <Fragment>

@@ -1,10 +1,10 @@
 import {Fragment} from "react";
-import MorabiBody from "../../../components/app/anjoman/morabibody";
+import Khalabans from "../../../components/app/anjoman/khalabans";
 
 const Morabi = () => {
     return (
         <Fragment>
-            <MorabiBody />
+            <Khalabans />
         </Fragment>
     )
 };

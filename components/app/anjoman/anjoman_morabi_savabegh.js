@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from './anjoman_morabi_savabegh.module.css';
 import Gem from "../../icons/gem";
+import Hat2 from "../../icons/hat2";
 import Calendar from "../../icons/calendar";
 import BodyRecords from "../flight_records/bodyrecords";
 
@@ -18,7 +19,7 @@ const AnjomanMorabiSavabegh = () => {
                 <div className={styles.box_right}>
                     <div className={styles.header_box}>
                         <div className={styles.title_left}>
-                            <Gem />
+                            <Hat2 />
                             <h5>تعداد شاگردان</h5>
                         </div>
                     </div>
@@ -99,6 +100,20 @@ const AnjomanMorabiSavabegh = () => {
                 </div>
             </div>
 
+            <ul className={styles.nav}>
+                <li
+                    onClick={ShowAll}
+                    className={showData ? styles.showsignup : styles.hidesignup}
+                >
+                    پرواز تفریحی
+                </li>
+                <li
+                    onClick={ShowFun}
+                    className={showData ? styles.hidesignup : styles.showsignup}
+                >
+                    پرواز آزاد
+                </li>
+            </ul>
             <BodyRecords />
         </>
     );

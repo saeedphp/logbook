@@ -1,8 +1,12 @@
 import { GiPaperPlane } from 'react-icons/gi';
+import React, { useContext } from "react";
+import { ThemeContext, THEME_TYPE } from '../../auth/themprovider';
 import Button from '../../ui/button';
 import styles from './sabt_parvaz.module.css';
 
 const Sabt_Parvaz = () => {
+
+    const { themeMode } = useContext(ThemeContext)
 
     return (
         <>
@@ -224,7 +228,9 @@ const Sabt_Parvaz = () => {
                     />
                 </div>
 
-                <div className={styles.controllers}>
+                <div
+                    style={{ display: themeMode == THEME_TYPE.KHALABAN ? 'flex' : 'none' }}
+                    className={`${styles.controllers}`}>
                     <label htmlFor="time_fly">زمان پرواز</label>
                     <input
                         id="time_fly"
@@ -234,12 +240,16 @@ const Sabt_Parvaz = () => {
                     />
                 </div>
 
-                <div className={styles.location_fly}>
+                <div
+                    style={{ display: themeMode == THEME_TYPE.ADMIN || themeMode == THEME_TYPE.MORABI ? 'flex' : 'none' }}
+                    className={`${styles.locationfly} ${styles.titletozih}`}>
                     <span>توضیحات و مانورها</span>
                     <p></p>
                 </div>
 
-                <div className={styles.description}>
+                <div
+                    style={{ display: themeMode == THEME_TYPE.ADMIN || themeMode == THEME_TYPE.MORABI ? 'flex' : 'none' }}
+                    className={styles.description}>
                     <p>
                         لورم  ایپسوم  متن  ساختگی  با  تولید  سادگی  نامفهوم  از  صنعت
                         چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه
@@ -248,7 +258,9 @@ const Sabt_Parvaz = () => {
                     </p>
                 </div>
 
-                <div className={styles.controllers}>
+                <div
+                    style={{ display: themeMode == THEME_TYPE.ADMIN ? 'flex' : 'none' }}
+                    className={`${styles.controllers}`}>
                     <label htmlFor="pasanger_phone">شماره تماس پسنجر</label>
                     <input
                         id="pasanger_phone"
